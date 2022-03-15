@@ -29,4 +29,45 @@ public class Magacin {
 	public void setKancelarijskiMaterijal(List<KancelarijskiMaterijal> kancelarijskiMaterijal) {
 		this.kancelarijskiMaterijal = kancelarijskiMaterijal;
 	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((kancelarijskiMaterijal == null) ? 0 : kancelarijskiMaterijal.hashCode());
+		result = prime * result + ((knjige == null) ? 0 : knjige.hashCode());
+		result = prime * result + ((kucnaHemija == null) ? 0 : kucnaHemija.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Magacin other = (Magacin) obj;
+		if (kancelarijskiMaterijal == null) {
+			if (other.kancelarijskiMaterijal != null)
+				return false;
+		} else if (!kancelarijskiMaterijal.equals(other.kancelarijskiMaterijal))
+			return false;
+		if (knjige == null) {
+			if (other.knjige != null)
+				return false;
+		} else if (!knjige.equals(other.knjige))
+			return false;
+		if (kucnaHemija == null) {
+			if (other.kucnaHemija != null)
+				return false;
+		} else if (!kucnaHemija.equals(other.kucnaHemija))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Magacin [knjige=" + knjige + ", kucnaHemija=" + kucnaHemija + ", kancelarijskiMaterijal="
+				+ kancelarijskiMaterijal + "]";
+	}
 }
