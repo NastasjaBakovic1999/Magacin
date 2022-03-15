@@ -15,18 +15,27 @@ public class Magacin {
 		return knjige;
 	}
 	public void setKnjige(List<Knjiga> knjige) {
+		if(knjige == null) {
+			throw new IllegalArgumentException("Morate dodati knjige za unos");
+		}
 		this.knjige = knjige;
 	}
 	public List<KucnaHemija> getKucnaHemija() {
 		return kucnaHemija;
 	}
 	public void setKucnaHemija(List<KucnaHemija> kucnaHemija) {
+		if(kucnaHemija == null) {
+			throw new IllegalArgumentException("Morate dodati kucnu hemiju za unos");
+		}
 		this.kucnaHemija = kucnaHemija;
 	}
 	public List<KancelarijskiMaterijal> getKancelarijskiMaterijal() {
 		return kancelarijskiMaterijal;
 	}
 	public void setKancelarijskiMaterijal(List<KancelarijskiMaterijal> kancelarijskiMaterijal) {
+		if(kancelarijskiMaterijal == null) {
+			throw new IllegalArgumentException("Morate dodati kanc materijal za unos");
+		}
 		this.kancelarijskiMaterijal = kancelarijskiMaterijal;
 	}
 	
