@@ -1,5 +1,8 @@
 package Magacin;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import Artikli.KancelarijskiMaterijal;
 import Artikli.Knjiga;
 import Artikli.KucnaHemija;
@@ -7,45 +10,69 @@ import Interfaces.MagacinInterfejs;
 
 public class Magacin2 implements MagacinInterfejs {
 
+	private List<Knjiga> knjige = new LinkedList<Knjiga>();
+	private List<KucnaHemija> kucnaHemija = new LinkedList<KucnaHemija>();
+	private List<KancelarijskiMaterijal> kancelarijskiMaterijal = new LinkedList<KancelarijskiMaterijal>();
+	public List<Knjiga> getKnjige() {
+		return knjige;
+	}
+	public void setKnjige(List<Knjiga> knjige) {
+		if(knjige == null) {
+			throw new IllegalArgumentException("Morate dodati knjige za unos");
+		}
+		this.knjige = knjige;
+	}
+	public List<KucnaHemija> getKucnaHemija() {
+		return kucnaHemija;
+	}
+	public void setKucnaHemija(List<KucnaHemija> kucnaHemija) {
+		if(kucnaHemija == null) {
+			throw new IllegalArgumentException("Morate dodati kucnu hemiju za unos");
+		}
+		this.kucnaHemija = kucnaHemija;
+	}
+	public List<KancelarijskiMaterijal> getKancelarijskiMaterijal() {
+		return kancelarijskiMaterijal;
+	}
+	public void setKancelarijskiMaterijal(List<KancelarijskiMaterijal> kancelarijskiMaterijal) {
+		if(kancelarijskiMaterijal == null) {
+			throw new IllegalArgumentException("Morate dodati kanc materijal za unos");
+		}
+		this.kancelarijskiMaterijal = kancelarijskiMaterijal;
+	}
+	
 	@Override
 	public void DodajKnjigu(Knjiga k) {
-		// TODO Auto-generated method stub
-		
+		knjige.add(k);
 	}
 
 	@Override
 	public void DodajKancMaterija(KancelarijskiMaterijal km) {
-		// TODO Auto-generated method stub
-		
+		kancelarijskiMaterijal.add(km);
 	}
 
 	@Override
 	public void DodajKucnuHemiju(KucnaHemija kh) {
-		// TODO Auto-generated method stub
-		
+		kucnaHemija.add(kh);
 	}
 
 	@Override
 	public void IzbaciKnjigu(Knjiga k) {
-		// TODO Auto-generated method stub
-		
+		knjige.remove(k);
 	}
 
 	@Override
 	public void IzbaciKancMaterija(KancelarijskiMaterijal km) {
-		// TODO Auto-generated method stub
-		
+		kancelarijskiMaterijal.remove(km);
 	}
 
 	@Override
 	public void IzbaciKucnuHemiju(KucnaHemija kh) {
-		// TODO Auto-generated method stub
-		
+		kucnaHemija.remove(kh);
 	}
 
 	@Override
 	public Knjiga NadjiKnjigu(int sifra) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
