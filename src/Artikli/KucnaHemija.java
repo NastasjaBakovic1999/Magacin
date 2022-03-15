@@ -13,7 +13,7 @@ public class KucnaHemija {
 	}
 	public void setNaziv(String naziv) {
 		if(naziv == null || naziv.isEmpty()) {
-			throw new IllegalArgumentException("Naziv ne moze biti prazan");
+			throw new IllegalArgumentException("Naziv ne moze biti prazan.  Molimo unesite naziv!");
 		}
 		Naziv = naziv;
 	}
@@ -31,7 +31,7 @@ public class KucnaHemija {
 	}
 	public void setOpis(String opis) {
 		if(opis == null || opis.isEmpty()) {
-			throw new IllegalArgumentException("Opis ne moze biti prazan");
+			throw new IllegalArgumentException("Opis ne moze biti prazan. Molimo unesite opis!");
 		}
 		Opis = opis;
 	}
