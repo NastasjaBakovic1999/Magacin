@@ -41,17 +41,10 @@ public class Magacin2 implements MagacinInterfejs {
 		this.kancelarijskiMaterijal = kancelarijskiMaterijal;
 	}
 	
-	
+
 	@Override
 	public void DodajKnjigu(Knjiga k) {
-		if(k == null) {
-			throw new IllegalArgumentException("Morate uneti knjigu koju zelite da dodate");
-		}
-		if(knjige.contains(k)) {
-			throw new IllegalArgumentException("Knjiga se vec nalazi u listi knjiga");
-		}
 		knjige.add(k);
-		
 	}
 
 	@Override
@@ -63,19 +56,11 @@ public class Magacin2 implements MagacinInterfejs {
 			throw new IllegalArgumentException("Materijal se vec nalazi u listi materijala");
 		}
 		kancelarijskiMaterijal.add(km);
-		
 	}
 
 	@Override
 	public void DodajKucnuHemiju(KucnaHemija kh) {
-		if(kh == null) {
-			throw new IllegalArgumentException("Morate uneti kucnu hemiju koju zelite da dodate");
-		}
-		if(kucnaHemija.contains(kh)) {
-			throw new IllegalArgumentException("Kucna hemija se vec nalazi u listi");
-		}
 		kucnaHemija.add(kh);
-		
 	}
 
 	@Override
@@ -102,18 +87,11 @@ public class Magacin2 implements MagacinInterfejs {
 
 	@Override
 	public void IzbaciKucnuHemiju(KucnaHemija kh) {
-		if(kh == null) {
-			throw new IllegalArgumentException("Morate uneti kucnu hemiju koju zelite da obrisete");
-		}
-		if(!kucnaHemija.contains(kh)) {
-			throw new IllegalArgumentException("Kucna hemija se ne nalazi u listi");
-		}
 		kucnaHemija.remove(kh);
 	}
 
 	@Override
 	public Knjiga NadjiKnjigu(int sifra) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
